@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.1</TargetFrameworks>
+		<TargetFrameworks>net6.0</TargetFrameworks>
 		<Company>Digital Garage</Company>
 		<Version>4.3.2</Version>
 		<Copyright>Copyright © Digital Garage 2017</Copyright>
@@ -15,9 +15,6 @@
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<LangVersion>10.0</LangVersion>
 	</PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <DefineConstants>$(DefineConstants);NO_SPAN</DefineConstants>
-  </PropertyGroup>
         <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
 		  <PublishRepositoryUrl>true</PublishRepositoryUrl>
 		  <EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -27,8 +24,7 @@
 		  <NoWarn>$(NoWarn);1591;1573;1572;1584;1570;3021</NoWarn>
         </PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="NBitcoin" Version="7.0.37" />
-		<PackageReference Include="NBitcoin.Altcoins" Version="3.0.24" />
+		<PackageReference Include="NBitcoin.Altcoins" Version="0.0.2" />
 		<PackageReference Include="System.Net.WebSockets.Client" Version="4.3.2" />
 	</ItemGroup>
   <ItemGroup>
